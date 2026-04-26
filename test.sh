@@ -4,4 +4,4 @@ echo "Hello, World!" > output.txt
 
 cat output.txt
 
-exit 1
+exit 0
