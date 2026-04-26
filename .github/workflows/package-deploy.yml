@@ -66,7 +66,7 @@ jobs:
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_DEPLOY }}
     steps:
       - uses: actions/checkout@v3
-      - run: railway service redeploy ${{ env.SVC_ID }} -y
+      - run: railway redeploy --service=${{ env.SVC_ID }} --yes
   createTag:
     name: Create Tag
     needs: deploy-prod
