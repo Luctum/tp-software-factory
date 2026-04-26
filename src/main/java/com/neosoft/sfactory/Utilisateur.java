@@ -1,7 +1,10 @@
 package com.neosoft.sfactory;
 
+import java.util.List;
+
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
+import jakarta.transaction.Transactional;
 
 
 /**
@@ -15,15 +18,18 @@ import jakarta.persistence.Entity;
  *
  * {@code
  *     public void doSomething() {
- *         MyEntity entity1 = new MyEntity();
- *         entity1.field = "field-1";
+ *         Utilisateur entity1 = new Utilisateur();
+ *         entity1.nom = "Martin";
+ *         entity1.prenom = "Lucas";
  *         entity1.persist();
  *
  *         List<MyEntity> entities = MyEntity.listAll();
  *     }
  * }
  */
+@Transactional
 @Entity
-public class MyEntity extends PanacheEntity {
-    public String field;
+public class Utilisateur extends PanacheEntity {
+    public String nom;
+    public String prenom;
 }
