@@ -4,13 +4,7 @@ name: Create and publish a Docker image
 on:
   push:
     branches: ['release']
-  workflow_dispatch:
-    inputs:
-      who-to-greet:
-        description: Who to greet in the log
-        required: true
-        default: 'World'
-        type: string
+ 
 
 
 env:
@@ -108,4 +102,4 @@ jobs:
         id: print-to-log
         uses: Luctum/test-action@main
         with:
-          who-to-greet: ${{ inputs.who-to-greet }}
+          who-to-greet: "Hello"
