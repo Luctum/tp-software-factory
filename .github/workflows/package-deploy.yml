@@ -62,7 +62,7 @@ jobs:
     environment: approve-prod
     container: ghcr.io/railwayapp/cli:latest
     env:
-      SVC_ID: superapp
+      SVC_ID: tp-software-factory
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_DEPLOY }}
     steps:
       - uses: actions/checkout@v3
