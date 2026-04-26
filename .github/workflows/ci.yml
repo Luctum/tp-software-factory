@@ -71,6 +71,7 @@ jobs:
   zap-analysis:
     needs: build-and-test
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@v6
       - name: Set up JDK 25
@@ -85,5 +86,4 @@ jobs:
         uses: zaproxy/action-baseline@v0.15.0
         with:
           target: 'http://localhost:8080'
-          allow_issue_writing: false
 
