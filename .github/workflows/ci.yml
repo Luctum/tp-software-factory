@@ -9,7 +9,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -37,7 +37,7 @@ jobs:
           path: ./target/classes
 
   sonar-code-analysis:
-    needs: build
+    needs: build-and-test 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -68,8 +68,8 @@ jobs:
             -Dsonar.java.binaries=./classes
             -Dsonar.host.url=https://sonarcloud.io
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-  zap:
-    needs: build
+  zap-analysis:
+    needs: build-and-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
