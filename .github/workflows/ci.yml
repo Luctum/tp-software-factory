@@ -25,7 +25,4 @@ jobs:
         run: ./mvnw verify -B
 
       - name: Chips
-        run: echo "Hello world" >> test.txt
-
-      - name: Toto
-        run: cat test.txt
+        run: ./test.sh
