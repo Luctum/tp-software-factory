@@ -20,7 +20,8 @@ public class GreetingResource {
         }
 
         if(true) {
-           System.out.println("This is a true condition");
+           System.out.println("This is a true condition");$
+        }
         return "Hello from Quarkus REST";
     }
 }
