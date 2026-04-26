@@ -60,7 +60,7 @@ jobs:
     environment: approve-prod
     container: ghcr.io/railwayapp/cli:latest
     env:
-      SVC_ID: my-service-id
+      SVC_ID: superapp
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_DEPLOY }}
     steps:
       - uses: actions/checkout@v3
