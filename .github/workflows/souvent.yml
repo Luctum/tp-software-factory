@@ -1,4 +1,4 @@
-name: Le job de 22h
+name: Le job de 22h05
 on:
     schedule:
         - cron: 05 22 * * *    

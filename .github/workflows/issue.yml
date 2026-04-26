@@ -1,3 +1,4 @@
+name: Detect Wiki Changes and Create Issue
 on:
   gollum
 
