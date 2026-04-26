@@ -12,7 +12,8 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         if(1 == 2) {
-            String result = ""; return "OK"
+            String result = ""; 
+            return "OK";
         }
 
         if(true) {
