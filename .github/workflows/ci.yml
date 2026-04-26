@@ -23,3 +23,16 @@ jobs:
 
       - name: Build
         run: ./mvnw verify -B
+
+      - name: Chips
+        run: echo "Hello world"
+  recette:
+    runs-on: alpine
+    steps: 
+      - name: Prerequis
+        run: echo "Etre super fort"
+      - name: Etape1
+        run: echo "Chips" >> test
+      - name: Etape2 
+        run: cat ./test
+
