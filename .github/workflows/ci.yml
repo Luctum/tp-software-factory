@@ -83,6 +83,8 @@ jobs:
         run: ./mvnw verify -B
       - name: Dependency-check
         uses: dependency-check/Dependency-Check_Action@main
+        env:
+          JAVA_HOME: /opt/jdk
         id: Depcheck
         with:
           project: 'test'
@@ -109,7 +111,7 @@ jobs:
           distribution: temurin
           cache: maven
       - name: Build & Test
-        run: ./mvnw quarkus:dev
+        run: ./mvnw quarkus:dev & echo $! > startupApp.pid
       - name: Run OWASP ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.15.0
         with:
