@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Hello, World!" > output.txt
+echo "Hello, World1!" > output.txt
 
 cat output.txt
 
