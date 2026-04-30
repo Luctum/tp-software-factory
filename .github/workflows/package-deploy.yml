@@ -5,8 +5,6 @@ on:
   push:
     branches: ['release']
  
-
-
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -47,7 +45,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/luctum/tp-software-factory:latest
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           labels: ${{ steps.meta.outputs.labels }}
   deploy-prod:
     name: Deploy to Production
