@@ -60,7 +60,6 @@ jobs:
       SVC_ID: tp-software-factory
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_DEPLOY }}
     steps:
-      - uses: actions/checkout@v3
       - run: railway redeploy --service=${{ env.SVC_ID }} --yes
   createTag:
     name: Create Tag
