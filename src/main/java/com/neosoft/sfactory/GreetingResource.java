@@ -30,7 +30,7 @@ public class GreetingResource {
     @Consumes(MediaType.APPLICATION_JSON) 
     @Produces(MediaType.APPLICATION_JSON) 
     public RestResponse<UtilisateurBody> addUser(UtilisateurBody utilisateurBody) {
-        if(utilisateurBody==null || utilisateurBody.nom()==null || utilisateurBody.prenom()==null){
+        if(utilisateurBody == null || utilisateurBody.nom() == null || utilisateurBody.prenom() == null){
             return RestResponse.status(Status.BAD_REQUEST);
         }
         Utilisateur entity1 = new Utilisateur();
