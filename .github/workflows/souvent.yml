@@ -1,11 +1,12 @@
-name: Le job de 22h
+name: Le job de 22h05
 on:
     schedule:
-        - cron: 0 22 * * *    
+        - cron: 05 22 * * *    
 
 jobs:
     create-issue:
         runs-on: ubuntu-latest
+        permissions: write-all
         steps:
             - uses: actions/checkout@v3
             - uses: JasonEtco/create-an-issue@v2
