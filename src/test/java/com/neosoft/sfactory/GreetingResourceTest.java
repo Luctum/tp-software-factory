@@ -20,7 +20,7 @@ class GreetingResourceTest {
         String jsonInput = """
             {
                 "nom": "Dupont",
-                "prenom": "Jeano"
+                "prenom": "Jean"
             }
             """;
 
